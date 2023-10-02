@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+  
+}
+.container{
+    display: flex;
+    gap: 1px;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+.node{
+    background-color: green;
+    min-height: 20px;
+    min-width: 20px;
+}
