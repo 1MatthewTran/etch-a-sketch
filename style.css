@@ -1,5 +1,6 @@
 body{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 75vh;
@@ -8,6 +9,7 @@ body{
 .container{
     display: flex;
     gap: 1px;
+    border: 2px solid red; 
 }
 .row{
     display: flex;
@@ -15,7 +17,11 @@ body{
     gap: 1px;
 }
 .node{
-    background-color: green;
+    background-color: black;
     min-height: 20px;
     min-width: 20px;
+}
+
+.hovered{
+    background-color: white;
 }
