@@ -1,9 +1,12 @@
 const gridContainer = document.querySelector('.container');
+const reset = document.querySelector('.reset');
+const changeSqares = document.querySelector('.change-squares');
 function renderGrid(size){
-    for(let i=0; i<16; i++){
+    gridContainer.innerHTML = ''
+    for(let i=0; i<size; i++){
         const row = document.createElement('div');
         row.classList.add('row');
-        for(let j=0; j<16; j++){
+        for(let j=0; j<size; j++){
             const col = document.createElement('div');
             col.classList.add('node');
             row.appendChild(col);
@@ -16,4 +19,15 @@ function renderGrid(size){
         }
     });
 }
-renderGrid();
+reset.addEventListener('click', function(event){
+    const nodes = document.querySelectorAll('.node');
+    nodes.forEach(node => {
+        node.classList.remove('hovered');
+    })
+});
+changeSqares.addEventListener('click', function(event){
+    squaresPerSide = window.prompt("Enter Number of Squares Per Side.");
+    renderGrid(squaresPerSide);
+});
+
+renderGrid(16);
